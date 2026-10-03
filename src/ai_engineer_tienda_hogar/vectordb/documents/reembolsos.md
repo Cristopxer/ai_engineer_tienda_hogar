@@ -1,0 +1,2 @@
+# Reembolsos
+Los reembolsos se procesan en 5-10 días hábiles después de recibir el producto devuelto. Se reembolsa al mismo método de pago original. Reembolsos mayores a $500 requieren aprobación de un supervisor humano — el agente no debe aprobarlos automáticamente.

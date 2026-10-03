@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# User
+TASK.md
+
+
 # Distribution / packaging
 .Python
 build/

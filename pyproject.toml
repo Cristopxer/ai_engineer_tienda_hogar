@@ -1,0 +1,26 @@
+[project]
+name = "ai-engineer-tienda-hogar"
+version = "0.1.0"
+description = "Customer support agent for tienda hogar"
+readme = "README.md"
+authors = [
+    { name = "cristopxer", email = "cristopherortiz457@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain>=1.4.3",
+    "langgraph>=1.2.12",
+]
+
+[project.scripts]
+ai-engineer-tienda-hogar = "ai_engineer_tienda_hogar:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "xd",
+]

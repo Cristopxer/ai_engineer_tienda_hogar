@@ -1,0 +1,2 @@
+# Política de garantía
+Todos los electrodomésticos grandes (refrigeradoras, lavadoras, estufas) tienen garantía de 12 meses desde la fecha de compra. Electrodomésticos pequeños (licuadoras, planchas, tostadoras) tienen garantía de 6 meses. La garantía cubre defectos de fábrica, no daños por mal uso.
