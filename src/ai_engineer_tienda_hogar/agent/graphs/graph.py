@@ -6,7 +6,8 @@ from ai_engineer_tienda_hogar.agent.nodes.customer_service_node import CustomerS
 from ai_engineer_tienda_hogar.agent.states.state import State
 from ai_engineer_tienda_hogar.agent.tools.order_estatus.order_status import consultar_estado_pedido
 from ai_engineer_tienda_hogar.agent.tools.retriever.retriever import Retriever
-
+from ai_engineer_tienda_hogar.agent.nodes.retrieval_node import RetrievalContextNode
+from ai_engineer_tienda_hogar.agent.nodes.guardrial_node import PolicyRouterNode
 
 class GraphBuilder:
     def __init__(self, model_name: str, emb_model_name: str, db_path: str):
@@ -16,36 +17,35 @@ class GraphBuilder:
         self.graph_builder = StateGraph(State)
 
     def build_graph(self):
-        """Builds tienda hogar customer service graph"""
-
-        # tools
         retriever_tool = Retriever(self.emb_model_name, self.db_path).get_retriever()
         order_status_tool = consultar_estado_pedido
         tools = [retriever_tool, order_status_tool]
         tools_node = ToolNode(tools)
 
-        # llm
         model = OAIChatModel(self.model_name, 0).get_model()
 
-        # Nodes
-        chat_node = CustomerServiceNode(model)
-        chat_node = chat_node.create_chatbot(tools)
-        tools_node = ToolNode(tools)
+        chat_node = CustomerServiceNode(model).create_chatbot(tools)
+        policy_router_node = PolicyRouterNode(model)
+        retrieval_node = RetrievalContextNode(retriever_tool)
 
+        self.graph_builder.add_node("retrieve_context", retrieval_node.retrieve)
+        self.graph_builder.add_node("policy_router", policy_router_node.route)
         self.graph_builder.add_node("chat", chat_node)
         self.graph_builder.add_node("tools", tools_node)
 
-        # Edges
-        self.graph_builder.add_edge(START, "chat")
+        self.graph_builder.add_edge(START, "retrieve_context")
+        self.graph_builder.add_edge("retrieve_context", "policy_router")
+
+        self.graph_builder.add_conditional_edges(
+            "policy_router",
+            lambda state: state["route"],
+            {
+                "contact_channel": END,
+                "normal_flow": "chat",
+            },
+        )
+
         self.graph_builder.add_conditional_edges("chat", tools_condition)
         self.graph_builder.add_edge("tools", "chat")
 
         return self.graph_builder.compile()
-
-
-
-
-
-    
-        
-    
