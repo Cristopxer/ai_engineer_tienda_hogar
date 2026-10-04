@@ -1,0 +1,26 @@
+[
+    {
+        "order_id": "ORD-1001",
+        "producto": "Refrigeradora",
+        "estado": "En tránsito",
+        "entrega_estimada": "3 días hábiles"
+    },
+    {
+        "order_id": "ORD-1002",
+        "producto": "Licuadora",
+        "estado": "Entregado",
+        "entrega_estimada": "—"
+    },
+    {
+        "order_id": "ORD-1003",
+        "producto": "Lavadora",
+        "estado": "Procesando",
+        "entrega_estimada": "6 días hábiles"
+    },
+    {
+        "order_id": "ORD-1004",
+        "producto": "Tostadora",
+        "estado": "Cancelado",
+        "entrega_estimada": "—"
+    }
+]

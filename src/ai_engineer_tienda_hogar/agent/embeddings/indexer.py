@@ -10,13 +10,21 @@ from ai_engineer_tienda_hogar.agent.llms.oai_embedding import OAIEmbeddings
 logger = get_logger(__name__)
 
 class Indexer():
-    def __init__(self, model_name, docs_path, db_path):
+    def __init__(self, model_name:str, db_path:str, docs_path:str = "../../documents"):
+        """Vector db functionalities
+        
+        Args:
+            model_name:str = Azure Open AI Embbedings model deployment name.
+            docs_path:str = Documents path.
+            db_path:str = Path where to save/load the vector db.
+        """
         self.emb_model_name = model_name
         self.docs_path = docs_path
         self.db_path = db_path
         self.oai_emb = OAIEmbeddings(self.emb_model_name).get_model()
 
     def load_files(self):
+        """Load files to build vector db"""
         # Load documents
         documents_path = Path(__file__).resolve().parent / self.docs_path
         docs = []
@@ -33,11 +41,8 @@ class Indexer():
                 # Open and read the markdown file
                 with open(file_path, "r", encoding="utf-8") as file:
                     content = file.read().strip()
-                    
-                    # Skip empty files
-                    if content:
-                        # Create a LangChain Document. We use the filename as metadata 
-                        # so we know exactly which file the answer came from.
+                                        
+                    if content:                        
                         doc = Document(
                             page_content=content,
                             metadata={"source": filename}
@@ -52,6 +57,7 @@ class Indexer():
 
 
     def update_or_create_indexer(self):
+        """Build vector db"""
         logger.info("Loading documents ...")
         docs = self.load_files()
         logger.info(docs)
@@ -62,8 +68,8 @@ class Indexer():
         vectordb.save_local(self.db_path)
         logger.info(f"Embeddings db succesfully saved: {self.db_path}")
 
-    def get_indexer(self):     
-
+    def get_indexer(self):
+        """Load vector db from local"""
         vectordb = FAISS.load_local(
             self.db_path,
             self.oai_emb,
@@ -71,9 +77,6 @@ class Indexer():
         )
 
         return vectordb.as_retriever()
-
-
-    
 
 
 

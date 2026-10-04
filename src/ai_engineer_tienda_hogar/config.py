@@ -8,4 +8,7 @@ class Config():
 
     def get_text_embedding_model(self):
         return self.config['DEFAULT'].get('TEXT_EMBEDDING_MODEL')
+
+    def get_llm_model(self):
+        return self.config['DEFAULT'].get('LLM_MODEL')
         
