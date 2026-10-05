@@ -1,0 +1,13 @@
+2026-10-04 23:11:11,633 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_embedding | Seting up embeddings model
+2026-10-04 23:11:11,714 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-04 23:11:11,715 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-04 23:11:11,715 | INFO | faiss.loader | Loading faiss.
+2026-10-04 23:11:11,755 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-04 23:11:11,806 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:11:11,911 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:11:12,864 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:11:13,919 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:11:15,220 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:11:15,696 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:11:16,884 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"

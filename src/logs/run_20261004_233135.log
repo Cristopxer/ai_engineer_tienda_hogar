@@ -1,0 +1,39 @@
+2026-10-04 23:31:35,202 | INFO | uvicorn.error | Started server process [10612]
+2026-10-04 23:31:35,203 | INFO | uvicorn.error | Waiting for application startup.
+2026-10-04 23:31:35,204 | INFO | uvicorn.error | Application startup complete.
+2026-10-04 23:31:35,205 | INFO | uvicorn.error | Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-10-04 23:32:44,796 | INFO | app | Incoming request: POST /index/update
+2026-10-04 23:32:44,798 | INFO | app | Updating index
+2026-10-04 23:32:44,799 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_embedding | Seting up embeddings model
+2026-10-04 23:32:44,855 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loading documents ...
+2026-10-04 23:32:44,868 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loaded: canales_contacto.md
+2026-10-04 23:32:44,887 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loaded: politica_devoluciones.md
+2026-10-04 23:32:44,901 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loaded: politica_garantia.md
+2026-10-04 23:32:44,921 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loaded: reembolsos.md
+2026-10-04 23:32:44,943 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Loaded: tiempos_envios.md
+2026-10-04 23:32:44,944 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | [Document(metadata={'source': 'canales_contacto.md'}, page_content='# Canales de contacto\nPara quejas sobre el trato de un empleado, disputas de facturación, o cualquier tema legal, el cliente debe ser referido a un agente humano en soporte@tiendahogar.example — el asistente de IA no debe intentar resolver estos casos.'), Document(metadata={'source': 'politica_devoluciones.md'}, page_content='# Política de devoluciones\nLos productos pueden devolverse dentro de 30 días de la compra si están sin usar y en su empaque original. Devoluciones después de 30 días solo se aceptan si el producto tiene un defecto cubierto por garantía. No se aceptan devoluciones de productos personalizados o en oferta final (“liquidación”).'), Document(metadata={'source': 'politica_garantia.md'}, page_content='# Política de garantía\nTodos los electrodomésticos grandes (refrigeradoras, lavadoras, estufas) tienen garantía de 12 meses desde la fecha de compra. Electrodomésticos pequeños (licuadoras, planchas, tostadoras) tienen garantía de 6 meses. La garantía cubre defectos de fábrica, no daños por mal uso.'), Document(metadata={'source': 'reembolsos.md'}, page_content='# Reembolsos\nLos reembolsos se procesan en 5-10 días hábiles después de recibir el producto devuelto. Se reembolsa al mismo método de pago original. Reembolsos mayores a $500 requieren aprobación de un supervisor humano — el agente no debe aprobarlos automáticamente.'), Document(metadata={'source': 'tiempos_envios.md'}, page_content='# Tiempos de envío\nEnvíos a la capital: 2-3 días hábiles. Envíos a otras ciudades: 5-7 días hábiles. Envíos internacionales no están disponibles actualmente.')]
+2026-10-04 23:32:44,945 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Generating embeddings with model text-embedding-3-small
+2026-10-04 23:32:45,794 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:32:45,896 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-04 23:32:45,896 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-04 23:32:45,896 | INFO | faiss.loader | Loading faiss.
+2026-10-04 23:32:45,930 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-04 23:32:45,943 | INFO | ai_engineer_tienda_hogar.agent.embeddings.indexer | Embeddings db succesfully saved: agent/embeddings/embeddings_db
+2026-10-04 23:32:45,943 | INFO | app | Completed request: POST /index/update -> 200
+2026-10-04 23:32:45,943 | INFO | uvicorn.access | 127.0.0.1:58985 - "POST /index/update HTTP/1.1" 200
+2026-10-04 23:33:20,876 | INFO | app | Incoming request: POST /chat
+2026-10-04 23:33:20,878 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_embedding | Seting up embeddings model
+2026-10-04 23:33:20,884 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:33:20,942 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:33:21,578 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:33:22,760 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:33:24,305 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:33:24,661 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:33:26,173 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:33:26,177 | INFO | app | Completed request: POST /chat -> 200
+2026-10-04 23:33:26,177 | INFO | uvicorn.access | 127.0.0.1:59017 - "POST /chat HTTP/1.1" 200
+2026-10-04 23:34:07,436 | INFO | uvicorn.error | Shutting down
+2026-10-04 23:34:07,551 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-10-04 23:34:07,551 | INFO | uvicorn.error | Application shutdown complete.
+2026-10-04 23:34:07,551 | INFO | uvicorn.error | Finished server process [10612]

@@ -25,6 +25,7 @@ def configure_logging(log_dir: str | Path | None = None, level: int = logging.IN
     root_logger = logging.getLogger()
     root_logger.setLevel(level)
     root_logger.handlers.clear()
+    root_logger.propagate = False
 
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(level)
@@ -36,7 +37,13 @@ def configure_logging(log_dir: str | Path | None = None, level: int = logging.IN
 
     root_logger.addHandler(console_handler)
     root_logger.addHandler(file_handler)
-    root_logger.propagate = False
+
+    # Route Uvicorn logs through the same handlers
+    for logger_name in ("uvicorn", "uvicorn.error", "uvicorn.access"):
+        uvicorn_logger = logging.getLogger(logger_name)
+        uvicorn_logger.handlers.clear()
+        uvicorn_logger.setLevel(level)
+        uvicorn_logger.propagate = True
 
     _LOGGING_CONFIGURED = True
     return log_path

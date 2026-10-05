@@ -1,0 +1,35 @@
+2026-10-04 23:18:26,196 | INFO | uvicorn.error | Started server process [20584]
+2026-10-04 23:18:26,197 | INFO | uvicorn.error | Waiting for application startup.
+2026-10-04 23:18:26,198 | INFO | uvicorn.error | Application startup complete.
+2026-10-04 23:18:26,198 | INFO | uvicorn.error | Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-10-04 23:18:34,983 | INFO | app | Incoming request: POST /chat
+2026-10-04 23:18:34,988 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_embedding | Seting up embeddings model
+2026-10-04 23:18:35,062 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-04 23:18:35,063 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-04 23:18:35,063 | INFO | faiss.loader | Loading faiss.
+2026-10-04 23:18:35,092 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-04 23:18:35,103 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:18:35,151 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:18:36,057 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:18:37,233 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:18:38,588 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:18:38,917 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:18:40,397 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:18:40,401 | INFO | app | Completed request: POST /chat -> 200
+2026-10-04 23:18:40,402 | INFO | uvicorn.access | 127.0.0.1:58474 - "POST /chat HTTP/1.1" 200
+2026-10-04 23:20:53,803 | INFO | app | Incoming request: POST /chat
+2026-10-04 23:20:53,805 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_embedding | Seting up embeddings model
+2026-10-04 23:20:53,808 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:20:53,810 | INFO | ai_engineer_tienda_hogar.agent.llms.oai_model | Setting up Azure OpenAI Chat model connection for deployment: gpt-5.4-mini
+2026-10-04 23:20:54,511 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:20:55,673 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:20:57,083 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:20:57,283 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/text-embedding-3-small/embeddings?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:20:58,853 | INFO | httpx2 | HTTP Request: POST https://cortizh2-6844-resource.openai.azure.com/openai/deployments/gpt-5.4-mini/chat/completions?api-version=2024-06-01 "HTTP/1.1 200 OK"
+2026-10-04 23:20:58,857 | INFO | app | Completed request: POST /chat -> 200
+2026-10-04 23:20:58,857 | INFO | uvicorn.access | 127.0.0.1:63729 - "POST /chat HTTP/1.1" 200
+2026-10-04 23:24:21,176 | INFO | uvicorn.error | Shutting down
+2026-10-04 23:24:21,278 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-10-04 23:24:21,278 | INFO | uvicorn.error | Application shutdown complete.
+2026-10-04 23:24:21,279 | INFO | uvicorn.error | Finished server process [20584]

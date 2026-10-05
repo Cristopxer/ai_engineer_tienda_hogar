@@ -1,0 +1,8 @@
+2026-10-04 23:24:26,991 | INFO | uvicorn.error | Started server process [25624]
+2026-10-04 23:24:26,992 | INFO | uvicorn.error | Waiting for application startup.
+2026-10-04 23:24:26,993 | INFO | uvicorn.error | Application startup complete.
+2026-10-04 23:24:26,994 | INFO | uvicorn.error | Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-10-04 23:24:59,191 | INFO | uvicorn.error | Shutting down
+2026-10-04 23:24:59,299 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-10-04 23:24:59,299 | INFO | uvicorn.error | Application shutdown complete.
+2026-10-04 23:24:59,302 | INFO | uvicorn.error | Finished server process [25624]

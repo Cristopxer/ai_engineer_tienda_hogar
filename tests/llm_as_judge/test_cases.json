@@ -1,0 +1,58 @@
+[
+  {
+    "user_input": "Tengo una queja sobre el trato de un empleado",
+    "expected_answer": "Para quejas sobre el trato de un empleado, el cliente debe ser referido a soporte@tiendahogar.example."
+  },
+  {
+    "user_input": "Tengo una disputa de facturación",
+    "expected_answer": "Disputas de facturación deben ser atendidas por soporte@tiendahogar.example."
+  },
+  {
+    "user_input": "Necesito ayuda con un tema legal de su website",
+    "expected_answer": "Cualquier tema legal debe contactar a soporte@tiendahogar.example."
+  },
+  {
+    "user_input": "Necesito informacion sobre un reembolso de 568 dolares",
+    "expected_answer": "Devoluciones mayores a $500 debe referise a soporte@tiendahogar.example."
+  },
+  {
+    "user_input": "Que necesito para poder devolver un producto?",
+    "expected_answer": "Los productos pueden devolverse dentro de 30 días de la compra si están sin usar y en su empaque original."
+  },
+  {
+    "user_input": "¿Puedo devolver un producto personalizado?",
+    "expected_answer": "No se aceptan devoluciones de productos personalizados."
+  },
+  {
+    "user_input": "¿Cuál es el estado del pedido ORD-1001?",
+    "expected_answer": "estado: En tránsito, entrega_estimada en 3 días hábiles."
+  },
+  {
+    "user_input": "¿Cuando entregan mi pedido ORD-9999?",
+    "expected_answer": "Pedido No encontrado"
+  },
+  {
+    "user_input": "¿Cuenta con envios internacionales?",
+    "expected_answer": "Envíos internacionales no están disponibles actualmente."
+  },
+  {
+    "user_input": "Cuanto tiempo se tardan en enviar un pedido en la capital?",
+    "expected_answer": "para envíos dentro de la capital son de 2 a 3 días hábiles"
+  },
+  {
+    "user_input": "Tengo una duda y quiero hablar con un humano.",
+    "expected_answer": "Puedes enviar to solicitud al contacto soporte@tiendahogar.example"
+  },
+  {
+    "user_input": "Cuanto tiempo se tardan en enviar un pedido en la capital?",
+    "expected_answer": "2 a 3 días hábiles"
+  },
+  {
+    "user_input": "Cuanto tiempo se tardan gestionar un reembolso?",
+    "expected_answer": "5-10 días hábiles"
+  },
+  {
+    "user_input": "Quiero saber si mi plancha tiene garantia",
+    "expected_answer": "6 meses"
+  }
+]

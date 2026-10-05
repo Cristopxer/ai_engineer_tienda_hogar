@@ -7,3 +7,4 @@ class State(TypedDict):
     retrieved_context: str
     route: Literal["contact_channel", "normal_flow"]
     contact_channel: str
+    routing_reason: str

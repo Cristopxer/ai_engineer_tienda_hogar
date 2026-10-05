@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        AZURE_API_ENDPOINT: ${AZURE_API_ENDPOINT}
+        AZURE_API_KEY: ${AZURE_API_KEY}
+        OPENAI_API_VERSION: ${OPENAI_API_VERSION}
+        LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
+    environment:
+      AZURE_API_ENDPOINT: ${AZURE_API_ENDPOINT}
+      AZURE_API_KEY: ${AZURE_API_KEY}
+      OPENAI_API_VERSION: ${OPENAI_API_VERSION}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

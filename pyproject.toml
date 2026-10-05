@@ -10,10 +10,14 @@ requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
     "faiss-cpu>=1.15.1",
+    "fastapi>=0.142.2",
     "langchain>=1.4.3",
     "langchain-community>=0.4.2",
     "langchain-openai>=1.6.7",
     "langgraph>=1.2.12",
+    "pandas>=3.0.6",
+    "pytest>=9.1.1",
+    "uvicorn>=0.54.0",
 ]
 
 [project.scripts]

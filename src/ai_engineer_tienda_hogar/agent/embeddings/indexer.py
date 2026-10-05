@@ -14,9 +14,9 @@ class Indexer():
         """Vector db functionalities
         
         Args:
-            model_name:str = Azure Open AI Embbedings model deployment name.
-            docs_path:str = Documents path.
-            db_path:str = Path where to save/load the vector db.
+            model_name (str) = Azure Open AI Embbedings model deployment name.
+            docs_path (str) = Documents path.
+            db_path (str) = Path where to save/load the vector db.
         """
         self.emb_model_name = model_name
         self.docs_path = docs_path
@@ -68,15 +68,18 @@ class Indexer():
         vectordb.save_local(self.db_path)
         logger.info(f"Embeddings db succesfully saved: {self.db_path}")
 
-    def get_indexer(self):
-        """Load vector db from local"""
+    def get_indexer(self, k:int = 2):
+        """Load vector db from local
+        Args:
+            k (int) = number of top matches
+        """        
         vectordb = FAISS.load_local(
             self.db_path,
             self.oai_emb,
             allow_dangerous_deserialization=True
         )
 
-        return vectordb.as_retriever()
+        return vectordb.as_retriever(search_kwargs={"k": k})
 
 
 

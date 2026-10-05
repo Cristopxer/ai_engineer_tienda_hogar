@@ -1,0 +1,40 @@
+user_input;expected_answer;agent_answer;pass
+Necesito ayuda, con un tema legal de su website;soporte@tiendahogar.example;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;True
+Necesito informacion sobre un reembolso de 50 dolares;pago | original | 5 | 10 | días;"Claro. Un reembolso de **$50** se procesa así:
+
+- **Tiempo:** entre **5 y 10 días hábiles** después de que recibamos el producto devuelto.
+- **Método de devolución:** se reembolsa al **mismo método de pago original**.
+
+Como es un monto menor a **$500**, no requiere aprobación especial.
+
+Si quieres, también puedo ayudarte a revisar el estado de un pedido o a orientarte sobre el proceso de devolución.";True
+Que necesito para poder devolver un producto?;30 días | sin usar | empaque original;"Para devolver un producto en Tienda Hogar, necesitas que cumpla estas condiciones:
+
+- Estar dentro de los 30 días desde la compra
+- Estar sin usar
+- Conservar su empaque original
+
+Ten en cuenta que:
+- Después de 30 días, solo se aceptan devoluciones si el producto tiene un defecto cubierto por garantía
+- No se aceptan devoluciones de productos personalizados ni de oferta final (“liquidación”)
+
+Si quieres, también puedo ayudarte a revisar si tu caso entra en la política de devolución.";True
+¿Puedo devolver un producto personalizado?;no, los productos personalizados | no se aceptan devoluciones | no se aceptan | no se aceptan para devolución;"No, los productos personalizados no se aceptan para devolución.
+
+Si quieres, también puedo ayudarte a revisar qué otros productos sí pueden devolverse según la política.";True
+¿Cuál es el estado del pedido ORD-1001?;En tránsito;"El pedido **ORD-1001** está **en tránsito**.
+
+**Entrega estimada:** en **3 días hábiles**.";True
+¿Cuando entregan mi pedido ORD-9999?;no pude encontrar | no encontrado;"No pude encontrar el pedido **ORD-9999** en el sistema.
+
+Si quieres, revisa que el número esté escrito correctamente y envíamelo de nuevo. Si prefieres, también puedo ayudarte a interpretar el estado si me compartes el ID correcto.";True
+¿Cuenta con envios internacionales?;no contamos con envíos internacionales | envíos internacionales no están disponibles | no, por el momento;"No, por el momento **no contamos con envíos internacionales**.
+
+Si quieres, también puedo decirte los tiempos de envío dentro del país.";True
+Tengo una duda y quiero hablar con un humano.;soporte@tiendahogar.example;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;True
+¿La garantía cubre daños por mal uso?;no | mal uso;No, la garantía no cubre daños por mal uso. Solo cubre defectos de fábrica.;True
+¿Qué garantía tiene una refrigeradora?;12 | meses;"Una refrigeradora tiene **garantía de 12 meses desde la fecha de compra**.
+
+La garantía cubre **defectos de fábrica**, pero **no daños por mal uso**.";True
+Necesito ayuda con un reembolso de 600 dólares;soporte@tiendahogar.example;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;True
+¿El reembolso se devuelve al mismo método de pago?;mismo método de pago | original;Sí, el reembolso se devuelve al mismo método de pago original.;True

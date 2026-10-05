@@ -1,0 +1,52 @@
+[
+  {
+    "user_input": "Necesito ayuda, con un tema legal de su website",
+    "expected_core": ["soporte@tiendahogar.example"]
+  },
+  {
+    "user_input": "Necesito informacion sobre un reembolso de 50 dolares",
+    "expected_core": ["pago","original","5", "10", "días"]
+  },
+  {
+    "user_input": "Que necesito para poder devolver un producto?",
+    "expected_core": ["30 días", "sin usar", "empaque original"]
+  },
+  {
+    "user_input": "¿Puedo devolver un producto personalizado?",
+    "expected_core": ["no, los productos personalizados","no se aceptan devoluciones",
+    "no se aceptan","no se aceptan para devolución"]
+  },
+  {
+    "user_input": "¿Cuál es el estado del pedido ORD-1001?",
+    "expected_core": ["En tránsito"]
+  },
+  {
+    "user_input": "¿Cuando entregan mi pedido ORD-9999?",
+    "expected_core": ["no pude encontrar", "no encontrado"]
+  },
+  {
+    "user_input": "¿Cuenta con envios internacionales?",
+    "expected_core": ["no contamos con envíos internacionales", "envíos internacionales no están disponibles",
+"no, por el momento"]
+  },
+  {
+    "user_input": "Tengo una duda y quiero hablar con un humano.",
+    "expected_core": ["soporte@tiendahogar.example"]
+  },
+    {
+    "user_input": "¿La garantía cubre daños por mal uso?",
+    "expected_core": ["no", "mal uso"]
+  },
+    {
+    "user_input": "¿Qué garantía tiene una refrigeradora?",
+    "expected_core": ["12", "meses"]
+  },
+    {
+    "user_input": "Necesito ayuda con un reembolso de 600 dólares",
+    "expected_core": ["soporte@tiendahogar.example"]
+  },
+  {
+    "user_input": "¿El reembolso se devuelve al mismo método de pago?",
+    "expected_core": ["mismo método de pago", "original"]
+  }
+]

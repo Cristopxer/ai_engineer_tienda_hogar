@@ -7,7 +7,7 @@ class RetrievalContextNode:
     def retrieve(self, state: State):
 
         user_message = state["messages"][-1].content
-        retrieved = self.retriever_tool.invoke(f"{user_message}, canales de contacto")
+        retrieved = self.retriever_tool.invoke(f"{user_message}")
 
         return {
             "retrieved_context": str(retrieved),

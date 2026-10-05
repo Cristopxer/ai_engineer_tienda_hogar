@@ -1,0 +1,46 @@
+user_input;expected_answer;agent_answer;score;reasoning
+Quiero saber si mi plancha tiene garantia;6 meses;"Sí, tu plancha tiene garantía: **6 meses desde la fecha de compra**.
+
+La garantía cubre **defectos de fábrica**, pero **no daños por mal uso**.  
+Si quieres, también puedo ayudarte a revisar qué casos suelen estar cubiertos.";1;The agent correctly states that the iron has a 6-month warranty, matching the expected answer. The extra details do not conflict with the core fact.
+Cuanto tiempo se tardan gestionar un reembolso?;5-10 días hábiles;"Los reembolsos se procesan en **5 a 10 días hábiles** después de que recibimos el producto devuelto.
+
+Se hacen al **mismo método de pago original**. Si quieres, también puedo ayudarte con otra duda sobre devoluciones o reembolsos.";1;La respuesta del agente coincide con el dato esperado: indica que el reembolso tarda 5 a 10 días hábiles. Añade detalles adicionales, pero no contradice la información principal.
+Cuanto tiempo se tardan en enviar un pedido en la capital?;2 a 3 días hábiles;"En la capital, los envíos tardan **2 a 3 días hábiles**.
+
+Si quieres, también te puedo decir el tiempo de envío para otras ciudades.";1;The agent’s answer matches the expected delivery time of 2 a 3 días hábiles for the capital, which is the core fact requested.
+Tengo una duda y quiero hablar con un humano.;Puedes enviar to solicitud al contacto soporte@tiendahogar.example;"Claro. Para que te atienda una persona, escribe a **soporte@tiendahogar.example**.
+
+Si quieres, también puedo ayudarte a redactar el mensaje para que sea más rápido.";1;The agent provides the same support contact email as the expected answer and correctly indicates that the user can reach a human through it. The extra offer to help draft the message does not conflict with the expected response.
+Cuanto tiempo se tardan en enviar un pedido en la capital?;para envíos dentro de la capital son de 2 a 3 días hábiles;"En la capital, los envíos tardan **2 a 3 días hábiles**.
+
+Si quieres, también te puedo decir el tiempo de envío para otras ciudades.";1;La respuesta del agente coincide con la información esperada: indica que los envíos dentro de la capital tardan de 2 a 3 días hábiles.
+¿Cuenta con envios internacionales?;Envíos internacionales no están disponibles actualmente.;"No, por el momento **no contamos con envíos internacionales**.
+
+Si quieres, también puedo decirte los tiempos de envío dentro del país.";1;The agent’s answer matches the expected meaning: international shipping is currently not available. The extra offer about domestic shipping does not conflict with the expected answer.
+¿Cuando entregan mi pedido ORD-9999?;Pedido No encontrado;"No pude encontrar el pedido **ORD-9999** en el sistema.
+
+Si quieres, revisa que el número esté escrito correctamente y vuelve a enviármelo. Si prefieres, también puedo ayudarte a interpretar el estado si me compartes el ID correcto.";1;The agent’s answer matches the expected meaning: it indicates the order ORD-9999 was not found in the system, which is equivalent to 'Pedido No encontrado'.
+¿Cuál es el estado del pedido ORD-1001?;estado: En tránsito, entrega_estimada en 3 días hábiles.;"El pedido **ORD-1001** está **en tránsito**.
+
+**Entrega estimada:** en **3 días hábiles**.";1;The agent’s answer matches the expected status and estimated delivery time: the order is in transit and delivery is estimated in 3 business days.
+¿Puedo devolver un producto personalizado?;No se aceptan devoluciones de productos personalizados.;"No, los productos personalizados no se aceptan para devolución.
+
+Si quieres, también puedo decirte qué opciones sí aplican en otros casos de devolución.";1;La respuesta del agente coincide semánticamente con la esperada: indica que los productos personalizados no se aceptan para devolución.
+Que necesito para poder devolver un producto?;Los productos pueden devolverse dentro de 30 días de la compra si están sin usar y en su empaque original.;"Para poder devolver un producto en Tienda Hogar, debe cumplir con esto:
+
+- Estar dentro de los 30 días desde la compra
+- Estar sin usar
+- Conservar su empaque original
+
+Además, ten en cuenta que:
+
+- Después de 30 días, solo se aceptan devoluciones si el producto tiene un defecto cubierto por garantía
+- No se aceptan devoluciones de productos personalizados
+- Tampoco de productos en oferta final o “liquidación”
+
+Si quieres, puedo ayudarte a revisar si tu caso entra en la política de devolución.";1;La respuesta del agente coincide con la información esencial esperada: se puede devolver dentro de 30 días, si está sin usar y en su empaque original. Añade detalles extra, pero no contradice la política principal.
+Necesito informacion sobre un reembolso de 568 dolares;Devoluciones mayores a $500 debe referise a soporte@tiendahogar.example.;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;1;La respuesta del agente indica que debe contactarse a soporte@tiendahogar.example, que coincide con la instrucción esperada para devoluciones mayores a $500.
+Necesito ayuda con un tema legal de su website;Cualquier tema legal debe contactar a soporte@tiendahogar.example.;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;1;The agent provides the same actionable instruction as the expected answer: contact support at soporte@tiendahogar.example for legal matters.
+Tengo una disputa de facturación;Disputas de facturación deben ser atendidas por soporte@tiendahogar.example.;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;1;La respuesta del agente indica el mismo canal de atención para disputas de facturación: soporte@tiendahogar.example, lo cual coincide semánticamente con la respuesta esperada.
+Tengo una queja sobre el trato de un empleado;Para quejas sobre el trato de un empleado, el cliente debe ser referido a soporte@tiendahogar.example.;Para este caso, por favor contacta el canal oficial de soporte: soporte@tiendahogar.example.;1;La respuesta del agente coincide semánticamente con la esperada: dirige la queja sobre el trato de un empleado al correo de soporte correcto (soporte@tiendahogar.example).
