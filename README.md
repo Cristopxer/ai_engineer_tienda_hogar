@@ -63,7 +63,11 @@ El archivo `src/app.py` expone un endpoint POST `/chat`.
 uvicorn src.app:app
 ```
 ## Docker
-Construye la imagen y levanta el servicio (asegurate de tener tus variables en `.env`)
+
+El proyecto incluye archivos Docker en la raíz:
+
+Construye la imagen y levanta el servicio (asegurate de tener tus variables en `.env`):
+
 ```powershell
 docker compose up --build
 ```
@@ -104,23 +108,29 @@ python tests\llm_as_judge\test_cases.py
 
 ```text
 ai_engineer_tienda_hogar/
+├─ Dockerfile                      # Imagen base para ejecutar la API con uvicorn
+├─ docker-compose.yml              # Orquestación local del servicio app
+├─ pyproject.toml                  # Dependencias y configuración del proyecto
+├─ uv.lock                         # Lockfile de dependencias (si aplica)
 ├─ src/
-│  ├─ app.py                         # API FastAPI
+│  ├─ app.py                       # API FastAPI
 │  └─ ai_engineer_tienda_hogar/
-│     ├─ config.py                   # Configuración del proyecto
-│     ├─ logging_config.py          # Logging personalizado
+│     ├─ config.py                 # Configuración del proyecto
+│     ├─ logging_config.py         # Logging personalizado
 │     ├─ agent/
-│     │  ├─ graphs/                 # Grafo principal de LangGraph
-│     │  ├─ nodes/                  # Nodos del flujo (chat, guardrail, retrieval)
-│     │  ├─ prompts/                # Prompts del sistema
-│     │  ├─ tools/                  # Tools del agente
-│     │  ├─ embeddings/            # Indexador y base vectorial local
-│     │  └─ states/                 # Estado del grafo
-│     └─ documents/                  # Base de conocimiento en Markdown
+│     │  ├─ graphs/                # Grafo principal de LangGraph
+│     │  ├─ nodes/                 # Nodos del flujo (chat, guardrail, retrieval)
+│     │  ├─ prompts/               # Prompts del sistema
+│     │  ├─ tools/                 # Tools del agente
+│     │  ├─ embeddings/           # Indexador y base vectorial local
+│     │  └─ states/                # Estado del grafo
+│     └─ documents/                # Base de conocimiento en Markdown
 ├─ tests/
-│  ├─ pytests/                       # Tests de validación del agente
-│  ├─ llm_as_judge/                  # Evaluaciones con LLM as judge / LangSmith
-│  └─ results/                       # Resultados generados por las pruebas
+│  ├─ pytests/                     # Tests de validación del agente
+|  |  └─ results/                    # Resultados generados por las pruebas
+│  └─ llm_as_judge/                # Evaluaciones con LLM as judge / LangSmith
+|     └─ results/                    # Resultados generados por las pruebas
+│  
 └─ README.md
 ```
 
@@ -134,7 +144,7 @@ ai_engineer_tienda_hogar/
 
 ## Documentación y conocimiento
 
-La base de conocimiento del agente está en `src/ai_engineer_tienda_hogar/documents/`. Allí viven las políticas y reglas usadas por el sistema para responder correctamente y decidir cuándo escalar al canal humano.
+La base de conocimiento del agente está en `src/ai_engineer_tienda_hogar/documents/`.
 
 ## Notas
 
